@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Médico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Sistema Médico</h1>
+        <nav>
+            <ul>
+                <li><a href="#consultorios">Consultórios</a></li>
+                <li><a href="#agendamentos">Agendamentos</a></li>
+                <li><a href="#pacientes">Pacientes</a></li>
+                <li><a href="#relatorios">Relatórios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Consultórios -->
+        <section id="consultorios">
+            <h2>Gerenciar Consultórios</h2>
+            <form id="formConsultorio">
+                <input type="text" id="consultorioNome" placeholder="Nome do Consultório" required>
+                <input type="text" id="consultorioEndereco" placeholder="Endereço" required>
+                <button type="submit">Cadastrar Consultório</button>
+            </form>
+            <h3>Lista de Consultórios</h3>
+            <ul id="consultorioList"></ul>
+        </section>
+
+        <!-- Agendamento -->
+        <section id="agendamentos">
+            <h2>Agendar Consulta</h2>
+            <form id="formAgendamento">
+                <input type="text" id="pacienteNome" placeholder="Nome do Paciente" required>
+                <input type="date" id="dataConsulta" required>
+                <input type="time" id="horaConsulta" required>
+                <button type="submit">Agendar Consulta</button>
+            </form>
+            <h3>Lista de Agendamentos</h3>
+            <ul id="agendamentoList"></ul>
+        </section>
+
+        <!-- Pacientes -->
+        <section id="pacientes">
+            <h2>Gerenciar Pacientes</h2>
+            <form id="formPaciente">
+                <input type="text" id="pacienteNome" placeholder="Nome do Paciente" required>
+                <input type="text" id="pacienteCpf" placeholder="CPF" required>
+                <button type="submit">Cadastrar Paciente</button>
+            </form>
+            <h3>Lista de Pacientes</h3>
+            <ul id="pacienteList"></ul>
+        </section>
+
+        <!-- Relatórios -->
+        <section id="relatorios">
+            <h2>Relatório Financeiro</h2>
+            <button id="gerarRelatorio">Gerar Relatório</button>
+            <div id="relatorioFinanceiro"></div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
